@@ -3,12 +3,16 @@ function themeConfig($form) {
     $logoUrl = new Typecho_Widget_Helper_Form_Element_Text('logoUrl', NULL, NULL, _t('站点 LOGO 地址'), _t('在这里填入一个图片 URL 地址, 以在网站标题前加上一个 LOGO'));
     $faviconUrl = new Typecho_Widget_Helper_Form_Element_Text('faviconUrl', NULL, NULL, _t('Favicon 地址'), _t('在这里填入一个图片 URL 地址, 以设置网站图标'));
     $jqueryUrl = new Typecho_Widget_Helper_Form_Element_Text('jqueryUrl', NULL, NULL, _t('JQuery CDN 地址'), _t('在这里填入 JQuery CDN URL 地址, 以加载网页必要的JQuery库'));
+    $gdtCDNUrl = new Typecho_Widget_Helper_Form_Element_Text('gdtCDNUrl', NULL, NULL, _t('Grass Design Theme CDN 地址'), _t('在这里填入Grass Design Theme CDN的地址, 以便更快速的加载网页的css文件和js文件。注意：Fonts文件也包含在CDN当中'));
     $cssCode = new Typecho_Widget_Helper_Form_Element_Textarea('cssCode', null, null, _t('自定义 CSS'), _t('通过自定义 CSS 您可以很方便的设置页面样式，自定义 CSS 不会影响网站源代码。'));
     $footerCode = new Typecho_Widget_Helper_Form_Element_Textarea('footerCode', null, null, _t('自定义页脚代码'), _t('该项显示在Copyright下方。支持HTML'));
+    $headerCode = new Typecho_Widget_Helper_Form_Element_Textarea('headerCode', null, null, _t('自定义页首代码'), _t('该项在<head></head>之间'));
     $form->addInput($logoUrl);
     $form->addInput($faviconUrl);
     $form->addInput($jqueryUrl);
+    $form->addInput($gdtCDNUrl);
     $form->addInput($cssCode);
+    $form->addInput($headerCode);
     $form->addInput($footerCode);
 }
 // 统计阅读数

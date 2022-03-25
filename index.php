@@ -1,5 +1,7 @@
 <?php
 /**
+ * A lite and beautiful theme for Typecho.
+ *
  * @package Grass Design Theme for Typecho
  * @author Grass Technology
  * @version 1.0.0
@@ -22,7 +24,7 @@
         <div class="gd_main">
             <div class="gd_block">
                 <div class="gd_box gd_post_header">
-                    <div>
+                    <div id="header">
                         <h3>欢迎来到</h3>
                         <h1><?php $this->options->title() ?></h1>
                         <h2><?php $this->options->description() ?></h2>
@@ -51,6 +53,7 @@
                         </a>
                     </div>
                     <?php endwhile; ?>
+                    <?php $this->pageNav(); ?>
                 </div>
             </div>
             <div id="d" class="gd_block" style="height: 145px"></div>
@@ -58,6 +61,10 @@
                 <?php include('footer.php') ?>
             </div>
         </div>
+        <?php if($this->options->fontCDNUrl != null) { ?>
+        <script src="<?php $this->options->gdtCDNUrl() ?>js/main.js"></script>
+        <?php } else { ?>
         <script src="<?php $this->options->themeUrl(); ?>js/main.js"></script>
+        <?php } ?>
     </body>
 </html>

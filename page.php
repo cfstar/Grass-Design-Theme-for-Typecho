@@ -22,7 +22,7 @@
         <div class="gd_main">
             <div class="gd_block">
                 <div class="gd_box gd_post_header">
-                    <div>
+                    <div id="header">
                         <h1><?php $this->title() ?></h1>
                     </div>
                 </div>

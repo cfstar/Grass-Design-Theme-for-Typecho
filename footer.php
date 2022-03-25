@@ -1,2 +1,2 @@
-                <p>Copyright &copy; 2022 <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>. All rights reserved.</p>
+                <p>Copyright &copy; 2022 <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>. All rights reserved. Theme by <a href="https://github.com/cfstar/Grass-Design-Theme-for-Typecho">GDT</a>.</p>
                 <?php $this->options->footerCode() ?>

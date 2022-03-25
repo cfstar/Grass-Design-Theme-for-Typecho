@@ -5,6 +5,10 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'gdt-font';
+}
+b, bold{
+    font-family: 'gdt-font-bold';
 }
 body{
     background-color: rgb(247,249,250);
@@ -88,6 +92,9 @@ blockquote{
 .gd_p a{
     display: inline-block;
 }
+.gd_p img{
+    width: 100%;
+}
 .gd_copy{
     position: absolute;
     bottom: 40px;
@@ -116,12 +123,13 @@ blockquote{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
 .gd_menu a{
-    display: inline-block;
+    display: block;
     height: 100%;
     background-color: white;
     transition: all 0.1s ease;
     padding: 0 20px;
     line-height: 45px;
+    float: left;
 }
 .gd_menu a:hover{
     background-color: rgb(235, 235, 235);
@@ -136,111 +144,46 @@ blockquote{
 .gd_img_100 img{
     width: 100%;
 }
-
-/**评论样式*/
-.pinglun {
-    margin-bottom: 10px
+.gd_list_item{
+    position: relative;
+    top: -1px;
+    border-top: 1px solid rgb(235,235,235);
+    border-bottom: 1px solid rgb(235,235,235);
+    width: calc(100% - 40px);
+    padding: 10px 20px;
+    transition: all 0.1s ease;
 }
-
-.pinglun li {
-    margin-bottom: 10px
+.gd_list_item:hover{
+    background-color: rgb(252, 252, 252);
 }
-
-.pinglun .pl-dan {
-    border-radius: 4px
+.gd_list_item_info{
+    margin: 5px 0;
 }
-
-.pinglun .t-p {
-    float: left
+.gd_list_item_info p{
+    color: rgb(90,90,90);
 }
-
-.pinglun .t-p img {
-    width: 50px;
-    height: 50px;
-    border: 4px solid rgba(210,210,210,0.2);
-    border-radius: 200px
+.gd_text, .gd_textarea, .gd_button{
+    margin: 5px 0;
+    width: calc(100% - 2px);
+    border: 1px solid rgb(235,235,235);
+    outline: none;
 }
-
-.pinglun .t-u {
-    margin-left: 70px;
-    line-height: 22px;
-    padding-bottom: 10px;
-    margin-bottom: 10px
+.gd_text{
+    height: 25px;
+    text-indent: 5px;
 }
-
-.pinglun .t-u .t-g {
-    color: #999;
-    font-size: 12px
+.gd_textarea{
+    max-width: calc(100% - 2px);
+    min-width: calc(100% - 2px);
+    min-height: 100px;
 }
-
-.pinglun .t-u .t-btn a {
-    font-size: 12px;
-    padding: 2px 5px;
-    border-radius: 4px;
-    margin-right: 10px;
-    border: #e2e2e2 1px solid;
-    color: #909090
+.gd_button{
+    display: block;
+    height: 35px;
+    background: white;
+    cursor: pointer;
+    width: 100%;
 }
-
-.pinglun .t-u .t-btn a:hover {
-    background: #1ab667;
-    color: #fff;
-    border: #1ab667 1px solid
-}
-
-.pinglun .t-s {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: #888
-}
-
-.pinglun .t-s a {
-    float: left;
-    margin-right: 10px;
-    color: #888
-}
-
-.pinglun .t-s p {
-    word-break: break-all;
-}
-
-.pinglun .cancel-comment-reply {
-    background: #f05050;
-    padding: 2px 5px;
-    border-radius: 4px;
-    display: inline-block;
-    margin-bottom: 10px
-}
-
-.pinglun .cancel-comment-reply a {
-    color: #fff
-}
-
-.comment-children .pl-dan {
-    padding-left: 65px;
-}
-
-.comment-children .t-u {
-    margin-left: 30px;
-    padding-left: 38px;
-    border-left: 1px solid #eee;
-}
-
-/* 页码 */
-.page-navigator {
-    padding: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    display: inherit
-}
-
-.page-navigator a:hover {
-    background: #393d49;
-    color: #fff
-}
-
-.page-navigator .current {
-    background: #333742;
-    color: #fff
+.gd_button:hover{
+    background: rgb(252,252,252,252);
 }
