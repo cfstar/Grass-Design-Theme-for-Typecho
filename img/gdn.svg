@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="457" height="457" viewBox="0 0 457 457">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Grass_Design_N_-_1);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <clipPath id="clip-Grass_Design_N_-_1">
+      <rect width="457" height="457"/>
+    </clipPath>
+  </defs>
+  <g id="Grass_Design_N_-_1" data-name="Grass Design N - 1" class="cls-1">
+    <path id="减去_1" data-name="减去 1" class="cls-2" d="M-89,208V49A159,159,0,0,1,70-110H229V49A159,159,0,0,1,70,208Z" transform="translate(159 179)"/>
+  </g>
+</svg>
