@@ -1,11 +1,3 @@
-<?php
-/**
- * @package Grass Design Theme for Typecho
- * @author Grass Technology
- * @version 1.0.0
- * @link https://gblog.tech/
- */
-?>
 <!DOCTYPE html>
 <html lang="zh">
     <head>

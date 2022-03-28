@@ -7,6 +7,7 @@ function themeConfig($form) {
     $footerCode = new Typecho_Widget_Helper_Form_Element_Textarea('footerCode', null, null, _t('自定义页脚代码'), _t('该项显示在Copyright下方。支持HTML'));
     $headerCode = new Typecho_Widget_Helper_Form_Element_Textarea('headerCode', null, null, _t('自定义页首代码'), _t('该项在head之间'));
     $menuCode = new Typecho_Widget_Helper_Form_Element_Textarea('menuCode', null, null, _t('自定义菜单代码'), _t('该项在悬浮菜单中'));
+    $friendLink = new Typecho_Widget_Helper_Form_Element_Textarea('friendLink', null, null, _t('友情链接'), _t('该项格式请看官方文档。'));
     $form->addInput($logoUrl);
     $form->addInput($faviconUrl);
     $form->addInput($jqueryUrl);
@@ -14,6 +15,7 @@ function themeConfig($form) {
     $form->addInput($headerCode);
     $form->addInput($footerCode);
     $form->addInput($menuCode);
+    $form->addInput($friendLink);
 }
 function themeFields($layout) {
     $postcopy = new Typecho_Widget_Helper_Form_Element_Textarea('postcopy', NULL, NULL, _t('文章版权信息'), _t('在这里填入文章版权信息，将在文章末尾展示。支持HTML'));

@@ -1,12 +1,12 @@
 <?php
 /**
- * A lite and beautiful theme for Typecho.
- * <a href="https://gblog.tech">生草博客</a> · <a href="主题官网"></a>
+ * GDTT(Grass Design Theme for Typecho)是一个简单快速的主题。它专门为Typecho制作，体积小，页面简洁，适合极客使用。
+ * <a href="https://gblog.tech" alt="生草博客">生草博客</a> · <a href="https://theme.estu.site/" alt="主题官网">主题官网</a> · <a href="https://qm.qq.com/cgi-bin/qm/qr?k=K9wCuEjDJZSZQsxj1NEDseU86jsleaPA&jump_from=webapi" alt="QQ群">QQ群</a>
  *
  * @package Grass Design Theme for Typecho
  * @author Grass Technology
- * @version 1.0.0
- * @link https://gblog.tech/
+ * @version 1.0.0 Preview 3
+ * @link https://theme.estu.site/
  */
 ?>
 <!DOCTYPE html>

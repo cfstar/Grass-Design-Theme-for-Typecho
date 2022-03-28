@@ -37,11 +37,8 @@ blockquote{
     border-left: 4px rgb(235,235,235) solid;
     width: calc(100% - 24px);
 }
-li{
-    padding-left: 10px;
-}
-ul{
-    padding-left: 10px;
+ol, ul{
+    margin-left: 20px;
 }
 .gd_head{
     position: fixed;
