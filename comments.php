@@ -24,14 +24,14 @@
                 <label for="textarea" class="required"><?php _e('内容'); ?></label>
                 <textarea rows="8" cols="50" name="text" id="textarea" class="gd_textarea" required ><?php $this->remember('text'); ?></textarea>
             </p>
+            <?php $security = $this->widget('Widget_Security'); ?>
+            <input type="hidden" name="_" value="<?php echo $security->getToken($this->request->getReferer())?>">
     		<p>
                 <button type="submit" class="gd_button"><span><?php _e('提交评论'); ?></span></button>
             </p>
-            <?php $security = $this->widget('Widget_Security'); ?>
-            <input type="hidden" name="_" value="<?php echo $security->getToken($this->request->getReferer())?>">
     	</form>
     <?php } else { ?>
-        <h4>当前</h4>
+        <h4>当前页面未开启评论功能。</h4>
     <?php } ?>
 </div>
 <ol id="comment_list">

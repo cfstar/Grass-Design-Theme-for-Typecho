@@ -1,6 +1,7 @@
 <?php
 /**
  * A lite and beautiful theme for Typecho.
+ * <a href="https://gblog.tech">生草博客</a> · <a href="主题官网"></a>
  *
  * @package Grass Design Theme for Typecho
  * @author Grass Technology
@@ -9,7 +10,7 @@
  */
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="zh">
     <head>
         <?php
         include('header.php');
@@ -18,12 +19,12 @@
     <body>
         <div class="gd_head">
             <a href="<?php $this->options->siteUrl(); ?>">
-                <img src="<?php echo $this->options->logoUrl(); ?>">
+                <img alt="logo" src="<?php echo $this->options->logoUrl(); ?>">
             </a>
         </div>
         <div class="gd_main">
             <div class="gd_block">
-                <div class="gd_box gd_post_header">
+                <div class="gd_box gd_pd gd_post_header">
                     <div id="header">
                         <h3>欢迎来到</h3>
                         <h1><?php $this->options->title() ?></h1>
@@ -32,17 +33,12 @@
                 </div>
             </div>
             <div class="gd_block">
-                <div class="gd_menu">
-                    <a href="<?php $this->options->siteUrl(); ?>">首页</a><?php $this->widget('Widget_Contents_Page_List')->parse('<a href="{permalink}">{title}</a>'); ?>
-                </div>
-            </div>
-            <div class="gd_block">
-                <div class="gd_box">
+                <div class="gd_box gd_pd">
                     <h3>文章列表</h3>
                     <?php while($this->next()): ?>
                     <div class="gd_block">
                         <a href="<?php $this->permalink() ?>">
-                            <div class="gd_box gd_pd gd_c">
+                            <div class="gd_box gd_c">
                                 <!-- <img src="./img/post1.jpg" height="80px"> -->
                                 <h2><?php $this->title() ?></h2>
                                 <p>作者: <?php $this->author(); ?> 发布日期: <?php $this->date('Y F j'); ?></p>
@@ -61,10 +57,7 @@
                 <?php include('footer.php') ?>
             </div>
         </div>
-        <?php if($this->options->fontCDNUrl != null) { ?>
-        <script src="<?php $this->options->gdtCDNUrl() ?>js/main.js"></script>
-        <?php } else { ?>
+        <?php include('sidebar.php'); ?>
         <script src="<?php $this->options->themeUrl(); ?>js/main.js"></script>
-        <?php } ?>
     </body>
 </html>

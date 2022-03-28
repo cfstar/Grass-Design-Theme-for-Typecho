@@ -1,3 +1,4 @@
+console.log('Grass Design Theme v 1.0.0 Preview 2.\nThanks for using.');
 function suit(){
     if($(".gd_main").width() >= 760){
         $(".gd_main").css('left', ($(window).width() / 2 - 400));
@@ -5,11 +6,23 @@ function suit(){
     else{
         $(".gd_main").css('left', 'calc(10% - 20px)');
     }
-    $(".gd_post_header").css('height', $("header").height() + 60);
+    $(".gd_post_header").css('height', $("#header").height() + 60);
     $("#d").css('height', $(".gd_copy").height() + 40);
+}
+function menu(){
+    if(menuStatus == false){
+        $("#menu-content").fadeIn(200);
+        menuStatus = true;
+    }
+    else{
+        $("#menu-content").fadeOut(200);
+        menuStatus = false;
+    }
 }
 suit();
 $(window).resize(function(){
     suit();
 });
-console.log("Grass Design Theme for Typecho v 1.0 | Copyright (c) 2022 Grass S&T");
+$("#menu").click(function(){
+    menu();
+});

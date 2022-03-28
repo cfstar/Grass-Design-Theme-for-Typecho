@@ -1,5 +1,5 @@
 ::selection{
-    background: rgb(52,52,52);
+    background: rgb(59,152,81);
     color: white;
 }
 *{
@@ -29,13 +29,19 @@ pre{
     position: relative;
     width: calc(100% - 40px);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     white-space: pre;
 }
 blockquote{
     padding-left: 20px;
     border-left: 4px rgb(235,235,235) solid;
     width: calc(100% - 24px);
+}
+li{
+    padding-left: 10px;
+}
+ul{
+    padding-left: 10px;
 }
 .gd_head{
     position: fixed;
@@ -49,16 +55,19 @@ blockquote{
     z-index: 100;
 }
 .gd_head img{
-    height: 100%;
+    height: 60px;
+    width: 60px;
 }
 .gd_main{
     position: absolute;
     top: 90px;
+    left: 0px;
     height: auto;
     width: 80%;
     max-width: 760px;
     padding: 20px;
     min-height: calc(100% - 130px);
+    transition: all 0.2s ease;
 }
 .gd_block{
     position: relative;
@@ -66,19 +75,22 @@ blockquote{
 }
 .gd_box{
     position: relative;
-    width: calc(100% - 40px);
-    padding: 20px;
+    width: calc(100% - 60px);
+    padding: 30px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+.gd_box:hover{
     background-color: white;
-    border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
 .gd_pd{
-    transition: all 0.2s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    background-color: white;
 }
 .gd_pd:hover{
-    transform: scale(0.98);
-    background-color: rgb(252, 252, 252);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    background-color: rgb(252, 252, 252);
 }
 .gd_c{
     cursor: pointer;
@@ -86,7 +98,7 @@ blockquote{
 .gd_p{
     word-break: auto;
 }
-.gd_p p,.gd_p h1,.gd_p h2,.gd_p h3,.gd_p h4,.gd_p h5,.gd_p h6,.gd_p img,.gd_p b,.gd_p code,.gd_p div,.gd_p a,.gd_p pre{
+.gd_p p,.gd_p h1,.gd_p h2,.gd_p h3,.gd_p h4,.gd_p h5,.gd_p h6,.gd_p img,.gd_p b,.gd_p code,.gd_p div,.gd_p a,.gd_p pre, .gd_p li{
     margin: 10px 0;
 }
 .gd_p a{
@@ -94,11 +106,12 @@ blockquote{
 }
 .gd_p img{
     width: 100%;
+    height: auto;
 }
 .gd_copy{
     position: absolute;
     bottom: 40px;
-    width: calc(100% - 40px);
+    width: calc(100% - 60px);
 }
 .gd_copy_middle{
     text-align: center;
@@ -110,47 +123,69 @@ blockquote{
 .gd_post_header div{
     position: absolute;
     bottom: 30px;
-    width: calc(100% - 40px);
+    width: calc(100% - 60px);
     word-break: break-all;
 }
 .gd_menu{
-    position: relative;
-    width: calc(100% - 60px);
-    height: 45px;
-    padding: 0 30px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-}
-.gd_menu a{
-    display: block;
-    height: 100%;
-    background-color: white;
-    transition: all 0.1s ease;
-    padding: 0 20px;
-    line-height: 45px;
-    float: left;
-}
-.gd_menu a:hover{
-    background-color: rgb(235, 235, 235);
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    z-index: 100;
     cursor: pointer;
+    background-color: rgb(59,152,81);
+    transition: all 0.2s ease;
 }
-.gd_menu .this{
-    background-color: rgb(224, 224, 224);
+.gd_menu:hover{
+    background-color: rgb(39,142,71);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-.gd_menu .this:hover{
-    background-color: rgb(224, 224, 224);
+.gd_menu img{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    left: 15px;
+    top: 15px;
+    user-select: none;
 }
-.gd_img_100 img{
-    width: 100%;
+.gd_menu_content{
+    z-index: 101;
+    width: calc(100% - 100px);
+    max-width: 400px;
+    height: calc(100% - 200px);
+    max-height: 500px;
+    padding: 20px;
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    display: none;
+}
+.gd_menu_content li{
+    list-style-type: none;
+    width: calc(100% - 40px);
+    display: block;
+    padding: 20px;
+    height: 20px;
+    border-radius: 5px;
+    transition: all 0.1s ease;
+}
+.gd_menu_content li:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background: rgb(252,252,252);
 }
 .gd_list_item{
     position: relative;
     top: -1px;
     border-top: 1px solid rgb(235,235,235);
     border-bottom: 1px solid rgb(235,235,235);
-    width: calc(100% - 40px);
-    padding: 10px 20px;
+    width: calc(100% - 60px);
+    padding: 10px 30px;
     transition: all 0.1s ease;
 }
 .gd_list_item:hover{
@@ -164,26 +199,58 @@ blockquote{
 }
 .gd_text, .gd_textarea, .gd_button{
     margin: 5px 0;
-    width: calc(100% - 2px);
     border: 1px solid rgb(235,235,235);
+    border-radius: 5px;
     outline: none;
+    background-color: inherit;
+    transition: all 0.1s ease;
+}
+.gd_text:hover, .gd_textarea:hover{
+    border: 1px solid rgb(190,190,190);
+}
+.gd_text:focus, .gd_textarea:focus{
+    border: 1px solid rgb(90,90,90);
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 .gd_text{
-    height: 25px;
-    text-indent: 5px;
+    height: 30px;
+    width: calc(100% - 22px);
+    padding: 0 10px;
 }
 .gd_textarea{
-    max-width: calc(100% - 2px);
-    min-width: calc(100% - 2px);
-    min-height: 100px;
+    max-width: calc(100% - 22px);
+    min-width: calc(100% - 22px);
+    width: calc(100% - 22px);
+    min-height: 120px;
+    padding: 10px;
 }
 .gd_button{
     display: block;
     height: 35px;
-    background: white;
+    background: rgb(235,235,235);
     cursor: pointer;
     width: 100%;
+    transition: all 0.1s ease;
 }
 .gd_button:hover{
-    background: rgb(252,252,252,252);
+    background: rgb(242,242,242);
+    border: 1px solid rgb(242,242,242);
+}
+.gd_button:focus{
+    background: rgb(190,190,190);
+    border: 1px solid rgb(190,190,190);
+}
+
+#response{
+    margin-bottom: 5px;
+}
+.title{
+    margin: 5px 0;
+}
+.menu_main{
+    width: calc(100% - 40px);
+    height: calc(100% - 20px);
+    padding: 10px 20px;
+    overflow: auto;
 }
