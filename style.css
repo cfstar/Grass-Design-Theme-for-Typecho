@@ -108,7 +108,7 @@ ol, ul{
 .gd_copy{
     position: absolute;
     bottom: 40px;
-    width: calc(100% - 60px);
+    width: calc(100% - 40px);
 }
 .gd_copy_middle{
     text-align: center;
