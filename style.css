@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     font-family: 'gdt-font';
+    transition: all 0.2s ease;
 }
 b, bold{
     font-family: 'gdt-font-bold';
@@ -21,8 +22,6 @@ a{
 }
 code{
     font-size: 15px;
-    font-family: 'Times New Roman', Times, serif;
-   /* white-space: nowrap; */
 }
 pre{
     background-color: rgb(235, 235, 235);
@@ -37,8 +36,8 @@ blockquote{
     border-left: 4px rgb(235,235,235) solid;
     width: calc(100% - 24px);
 }
-ol, ul{
-    margin-left: 20px;
+.gd_p ol, .gd_p ul{
+    margin-left: 30px;
 }
 .gd_head{
     position: fixed;
@@ -57,14 +56,12 @@ ol, ul{
 }
 .gd_main{
     position: absolute;
-    top: 90px;
-    left: 0px;
+    top: 70px;
     height: auto;
-    width: 80%;
+    width: 90%;
     max-width: 760px;
     padding: 20px;
-    min-height: calc(100% - 130px);
-    transition: all 0.2s ease;
+    min-height: calc(100% - 110px);
 }
 .gd_block{
     position: relative;
@@ -75,7 +72,7 @@ ol, ul{
     width: calc(100% - 60px);
     padding: 30px;
     border-radius: 5px;
-    transition: all 0.2s ease;
+    word-break: break-all;
 }
 .gd_box:hover{
     background-color: white;
@@ -92,9 +89,6 @@ ol, ul{
 .gd_c{
     cursor: pointer;
 }
-.gd_p{
-    word-break: auto;
-}
 .gd_p p,.gd_p h1,.gd_p h2,.gd_p h3,.gd_p h4,.gd_p h5,.gd_p h6,.gd_p img,.gd_p b,.gd_p code,.gd_p div,.gd_p a,.gd_p pre, .gd_p li{
     margin: 10px 0;
 }
@@ -109,6 +103,7 @@ ol, ul{
     position: absolute;
     bottom: 40px;
     width: calc(100% - 40px);
+    word-break: break-all;
 }
 .gd_copy_middle{
     text-align: center;
@@ -134,7 +129,6 @@ ol, ul{
     z-index: 100;
     cursor: pointer;
     background-color: rgb(59,152,81);
-    transition: all 0.2s ease;
 }
 .gd_menu:hover{
     background-color: rgb(39,142,71);
@@ -151,7 +145,7 @@ ol, ul{
 .gd_menu_content{
     z-index: 101;
     width: calc(100% - 100px);
-    max-width: 400px;
+    max-width: 420px;
     height: calc(100% - 200px);
     max-height: 500px;
     padding: 20px;
@@ -168,13 +162,17 @@ ol, ul{
     width: calc(100% - 40px);
     display: block;
     padding: 20px;
-    height: 20px;
+    /*height: 20px;*/
     border-radius: 5px;
     transition: all 0.1s ease;
 }
 .gd_menu_content li:hover{
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     background: rgb(252,252,252);
+}
+.gd_notice{
+    width: 100%;
+    height: auto;
 }
 .gd_list_item{
     position: relative;
