@@ -1,11 +1,11 @@
 <?php
 /**
  * GDTT(Grass Design Theme for Typecho)是一个简单快速的主题。它专门为Typecho制作，体积小，页面简洁，适合极客使用。
- * <a href="https://gblog.tech" alt="生草博客">生草博客</a> · <a href="https://theme.estu.site/" alt="主题官网">主题官网</a> · <a href="https://qm.qq.com/cgi-bin/qm/qr?k=K9wCuEjDJZSZQsxj1NEDseU86jsleaPA&jump_from=webapi" alt="QQ群">QQ群</a>
+ * <a href="https://gblog.tech" alt="生草博客">生草博客</a> · <a href="https://theme.estu.site/" alt="主题官网">主题官网</a> · <a href="https://qm.qq.com/cgi-bin/qm/qr?k=K9wCuEjDJZSZQsxj1NEDseU86jsleaPA&jump_from=webapi" alt="QQ群">QQ群</a> · <a href="https://github.com/cfstar/Grass-Design-Theme-for-Typecho/wiki/">主题文档</a>
  *
  * @package Grass Design Theme for Typecho
  * @author Grass Technology
- * @version 1.0.0 Preview 3
+ * @version 1.0.0 Preview 4
  * @link https://theme.estu.site/
  */
 ?>
@@ -23,6 +23,7 @@
             </a>
         </div>
         <div class="gd_main">
+            <?php include("frame/notice.php"); ?>
             <div class="gd_block">
                 <div class="gd_box gd_pd gd_post_header">
                     <div id="header">
@@ -30,6 +31,13 @@
                         <h1><?php $this->options->title() ?></h1>
                         <h2><?php $this->options->description() ?></h2>
                     </div>
+                </div>
+            </div>
+            <div class="gd_block">
+                <div class="gd_box gd_pd">
+                    <form method="post" action="">
+                        <div><input type="text" name="s" class="gd_text" placeholder="搜索"></div>
+                    </form>
                 </div>
             </div>
             <div class="gd_block">
@@ -57,7 +65,7 @@
                 <?php include('footer.php') ?>
             </div>
         </div>
-        <?php include('sidebar.php'); ?>
-        <script src="<?php $this->options->themeUrl(); ?>js/main.js"></script>
+        <?php include('frame/sidebar.php'); ?>
+        <script src="<?php $this->options->themeUrl(); ?>js/main.js" async></script>
     </body>
 </html>

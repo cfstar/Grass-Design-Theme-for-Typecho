@@ -1,10 +1,3 @@
-<?php
-/**
- * 友情链接
- *
- * @package custom
- */
-?>
 <!DOCTYPE html>
 <html lang="zh">
     <head>
@@ -21,30 +14,15 @@
         <div class="gd_main">
             <?php include("frame/notice.php"); ?>
             <div class="gd_block">
-                <div class="gd_box gd_pd gd_post_header">
-                    <div id="header">
-                        <h1>友情链接</h1>
-                    </div>
+                <div class="gd_box gd_pd">
+                    <form method="post" action="">
+                        <div><input type="text" name="s" class="gd_text" placeholder="搜索"></div>
+                    </form>
                 </div>
             </div>
             <div class="gd_block">
                 <div class="gd_box gd_pd">
-                    <div class="gd_p">
-                        <?php $this->content(); ?>
-                    </div>
-                    <?php link_parse($this->options->friendLink,0); ?>
-                </div>
-            </div>
-            <?php if($this->fields->postcopy != null) { ?>
-            <div class="gd_block">
-                <div class="gd_box gd_pd">
-                    <?php $this->fields->postcopy(); ?>
-                </div>
-            </div>
-            <?php } ?>
-            <div class="gd_block">
-                <div class="gd_box gd_pd">
-                    <?php include('frame/comments.php'); ?>
+                    <h3>找不到当前页面了呜呜呜~</h3>
                 </div>
             </div>
             <div id="d" class="gd_block" style="height: 145px"></div>
@@ -53,6 +31,6 @@
             </div>
         </div>
         <?php include('frame/sidebar.php'); ?>
-        <script src="<?php $this->options->themeUrl(); ?>js/main.js"></script>
+        <script src="<?php $this->options->themeUrl(); ?>js/main.js" async></script>
     </body>
 </html>

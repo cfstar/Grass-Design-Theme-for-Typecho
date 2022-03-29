@@ -12,6 +12,7 @@
             </a>
         </div>
         <div class="gd_main">
+            <?php include("frame/notice.php"); ?>
             <div class="gd_block">
                 <div class="gd_box gd_pd gd_post_header">
                     <div id="header">
@@ -35,7 +36,7 @@
             <?php } ?>
             <div class="gd_block">
                 <div class="gd_box gd_pd">
-                    <?php $this->need('comments.php'); ?>
+                    <?php include('frame/comments.php'); ?>
                 </div>
             </div>
             <div id="d" class="gd_block" style="height: 145px"></div>
@@ -43,7 +44,7 @@
                 <?php include('footer.php') ?>
             </div>
         </div>
-        <?php include('sidebar.php'); ?>
-        <script src="<?php $this->options->themeUrl(); ?>js/main.js"></script>
+        <?php include('frame/sidebar.php'); ?>
+        <script src="<?php $this->options->themeUrl(); ?>js/main.js" async></script>
     </body>
 </html>
