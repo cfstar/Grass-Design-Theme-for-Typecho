@@ -8,7 +8,7 @@ function suit(){
         $(".gd_p ul, .gd_p ol").css('margin-left','30px');
     }
     else{
-        $(".gd_main").css('left', 'calc(10% - 20px)');
+        $(".gd_main").css('left', 'calc(5% - 20px)');
         $("#menu").css('right','20px');
         $(".gd_box").css('padding','20px');
         $(".gd_box").css('width','calc(100% - 40px)');
