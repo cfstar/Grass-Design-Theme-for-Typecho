@@ -5,7 +5,7 @@
  *
  * @package Grass Design Theme for Typecho
  * @author Grass Technology
- * @version 1.0.0 Preview 4
+ * @version 1.0.1 Preview
  * @link https://theme.estu.site/
  */
 ?>
@@ -26,7 +26,13 @@
             <?php include("frame/notice.php"); ?>
             <div class="gd_block">
                 <div class="gd_box gd_pd gd_post_header">
+                	<?php if($this->options->headImage != null){ ?>
+                	<img alt="headimage" id="header_image" src="<?php $this->options->headImage(); ?>">
+                	<div class="gd_mask"></div>
+                	<div id="header" style="color:rgb(247,249,250)">
+                	<?php } else { ?>
                     <div id="header">
+                    <?php } ?>
                         <h3>欢迎来到</h3>
                         <h1><?php $this->options->title() ?></h1>
                         <h2><?php $this->options->description() ?></h2>
@@ -47,7 +53,6 @@
                     <div class="gd_block">
                         <a href="<?php $this->permalink() ?>">
                             <div class="gd_box gd_c">
-                                <!-- <img src="./img/post1.jpg" height="80px"> -->
                                 <h2><?php $this->title() ?></h2>
                                 <p>作者: <?php $this->author(); ?> 发布日期: <?php $this->date('Y F j'); ?></p>
                                 <p><?php $this->commentsNum('评论 %d'); ?></p>

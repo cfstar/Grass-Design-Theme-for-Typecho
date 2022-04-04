@@ -14,8 +14,13 @@
         <div class="gd_main">
             <?php include("frame/notice.php"); ?>
             <div class="gd_block">
-                <div class="gd_box gd_pd gd_post_header">
+                <div class="gd_box gd_pd gd_post_header"><?php if($this->fields->postimage != null){ ?>
+                	<img alt="headimage" id="header_image" src="<?php $this->fields->postimage(); ?>">
+                	<div class="gd_mask"></div>
+                	<div id="header" style="color:rgb(247,249,250)">
+                	<?php } else { ?>
                     <div id="header">
+                    <?php } ?>
                         <h1><?php $this->title() ?></h1>
                     </div>
                 </div>

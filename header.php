@@ -17,4 +17,4 @@
         <style>
         <?php $this->options->cssCode() ?>
         </style>
-        <?php $this->options->headCode(); ?>
+        <?php $this->options->headerCode(); ?>
